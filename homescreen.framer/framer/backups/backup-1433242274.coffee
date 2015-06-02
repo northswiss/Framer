@@ -6,58 +6,70 @@ sketch.scale = 0
 screen = "screen_city1"
 
 # SET DEFAULTS
-Framer.Defaults.Animation = {
-    curve: "spring(100,20,0)"
-}
 new BackgroundLayer
 	backgroundColor: "black"
 
-# ANIMATION
+# ANIMATIONS
 
-# CITIES
-# ======
-
-sketch.city1.states.add
-	hide: { y: -Screen.height }
-
-sketch.city2.y = 1100
-sketch.city2.states.add
-	show: { x: 0, y: 0, scale: 1 }
-
-# FOOTERS
-# =======
-sketch.footer1.states.add
-	hide: { visible: false }
-	
-sketch.footer2.states.add
-	show: { visible: true }
-
-animKenBurrows = new Animation({
-	layer: sketch.city1
-	properties: { x: -100, y: -100, scale: 1.3 }
-	delay: 2
-	time: 30
-	curve: "linear"
-})
-animKenBurrows.start()
-
+panZoom = (layerName) ->
+	layerName.animate
+		delay: 1
+		properties: { x: -100, y: -100, scale: 1.3 }
+		time: 30
+		curve: "linear"
 
 animFadeOut = new Animation({
 	layer: sketch.footer
-	properties: { opacity: 0 }
-})
-
-# Animation style for image bg transitions
+	properties: { opacity: 0 }})
+	
 animScaleLogo = new Animation ({
 	layer: sketch.logo
 	properties: { scale: .2 }
-	time: .1
+	curve: "cubic-bezier(0.39, 0.575, 0.565, 1)"
+	time: .4
 })
+
+bgShow = (bg) ->
+	bg.animate
+		properties: { x: 0, y: 0, scale: 1 }
+		
+bgHide = (bg) ->
+	bg.animate
+		properties: { y: -Screen.height}
+		
 animScaleLogoReverse = animScaleLogo.reverse()
 
+fadeOut = (layerName) ->
+	layerName.animate
+		time: .5
+		properties: { opacity: 0 }
+
+fadeIn = (layerName) ->
+	layerName.animate
+		time: 1.5
+		properties: { opacity: 1 }
+
+
+# HEADER BUTTON
+# ======
+	
+# btn_header = new Layer
+# 	width: Screen.width, height: 500
+			
+# CITIES
+# ======
+
+# Initialise all other cities y position
+sketch.city2.y = 900
+
+# Start the animation for initial BG
+panZoom(sketch.city1)
 
 # FOOTER
 # ======
+	
+sketch.footer2.opacity = 0
+
 # Create the tap target
 btn_footer = new Layer
 	x: 0, y: 1606, width: Screen.width, height: 170, backgroundColor: "transparent"
@@ -66,14 +78,25 @@ btn_footer = new Layer
 btn_footer.draggable.enabled = true
 btn_footer.draggable.horizontal = false
 
+func = () ->	
+	sketch.search_form.states.switch("hidden")
+	animScaleLogo.start()	
+	fadeOut(sketch.footer1)
+	fadeIn(sketch.footer2)
+	animScaleLogo.on(Events.AnimationEnd, animScaleLogoReverse.start)
+
+funcReverse = () ->
+	animScaleLogo.start()
+	fadeOut(sketch.footer2)
+	fadeIn(sketch.footer2)
+	animScaleLogo.on(Events.AnimationEnd, animScaleLogoReverse.start)
+	
 # DragStart listener
 btn_footer.on Events.DragStart, (event, layer)->
-	sketch.search_form.states.switch("hidden")
-	animScaleLogo.start()
-	animScaleLogo.on(Events.AnimationEnd, animScaleLogoReverse.start)
-	animKenBurrows.stop()
-	sketch.footer1.states.next()
-	sketch.footer2.states.next()
+	func()
+ 	
+# btn_header.on Events.DragStart, ->
+# 	funcReverse()
 		
 # DragMove listener
 btn_footer.on Events.DragMove, (event)->
@@ -81,8 +104,13 @@ btn_footer.on Events.DragMove, (event)->
 
 # DragEnd listener	
 btn_footer.on Events.DragEnd, ->
-	sketch.city1.states.next()
-	sketch.city2.states.next()
+# 	sketch.city2.states.next()
+	bgShow(sketch.city2)
+# 	sketch.city1.states.next()
+	bgHide(sketch.city1)
+
+sketch.city2.on Events.AnimationEnd, ->
+	panZoom(sketch.city2)
 
 # Only allow the btn_footer to be swiped on lower half
 btn_footer.draggable.constraints = { x:0, y: 1606, width: Screen.width, height: 1020 }
@@ -103,5 +131,3 @@ sketch.logo.on Events.Click, ->
 
 chevrons = new Layer
 	x:492, y:1668, width:36, height:59, image:"images/arrows.gif"
-	
-# sketch.logo.visible = false
