@@ -83,7 +83,6 @@ btn_footer.on Events.DragMove, (event)->
 btn_footer.on Events.DragEnd, ->
 	sketch.city1.states.next()
 	sketch.city2.states.next()
-# 	sketch.city2.animKenBurrows.start()
 
 # Only allow the btn_footer to be swiped on lower half
 btn_footer.draggable.constraints = { x:0, y: 1606, width: Screen.width, height: 1020 }
@@ -104,3 +103,5 @@ sketch.logo.on Events.Click, ->
 
 chevrons = new Layer
 	x:492, y:1668, width:36, height:59, image:"images/arrows.gif"
+	
+sketch.logo.visible = false
