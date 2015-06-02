@@ -3,6 +3,8 @@ sketch = Framer.Importer.load "imported/homescreen"
 
 sketch.scale = 0
 
+screen = "screen_city1"
+
 # SET DEFAULTS
 Framer.Defaults.Animation = {
     curve: "spring(100,20,0)"
@@ -14,12 +16,13 @@ new BackgroundLayer
 
 # CITIES
 # ======
-sketch.city2.y = 1100
+
 sketch.city1.states.add
 	hide: { y: -Screen.height }
 
+sketch.city2.y = 1100
 sketch.city2.states.add
-	show: { x: 100, y: 0, scale: 1 }
+	show: { x: 0, y: 0, scale: 1 }
 
 # FOOTERS
 # =======
@@ -31,7 +34,7 @@ sketch.footer2.states.add
 
 animKenBurrows = new Animation({
 	layer: sketch.city1
-	properties: { x: -100, y: -100, scale: 1.2 }
+	properties: { x: -100, y: -100, scale: 1.3 }
 	delay: 2
 	time: 30
 	curve: "linear"
@@ -53,7 +56,6 @@ animScaleLogo = new Animation ({
 animScaleLogoReverse = animScaleLogo.reverse()
 
 
-
 # FOOTER
 # ======
 # Create the tap target
@@ -72,7 +74,7 @@ btn_footer.on Events.DragStart, (event, layer)->
 	animKenBurrows.stop()
 	sketch.footer1.states.next()
 	sketch.footer2.states.next()
-	
+		
 # DragMove listener
 btn_footer.on Events.DragMove, (event)->
 	sketch.city1.y = -Screen.height/event.y
@@ -101,4 +103,4 @@ sketch.logo.on Events.Click, ->
 	sketch.search_form.states.switch("shown")
 
 chevrons = new Layer
-	x:0, y:0, width:36, height:59, image:"images/arrows.gif"
+	x:492, y:1668, width:36, height:59, image:"images/arrows.gif"
