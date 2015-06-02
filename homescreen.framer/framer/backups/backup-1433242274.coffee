@@ -104,4 +104,4 @@ sketch.logo.on Events.Click, ->
 chevrons = new Layer
 	x:492, y:1668, width:36, height:59, image:"images/arrows.gif"
 	
-sketch.logo.visible = false
+# sketch.logo.visible = false
