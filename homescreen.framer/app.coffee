@@ -11,10 +11,10 @@ new BackgroundLayer
 
 # ANIMATIONS
 
-panZoom = (layerName) ->
+kenBurns = (layerName) ->
 	layerName.animate
-		delay: 1
-		properties: { x: -100, y: -100, scale: 1.3 }
+		delay: .2
+		properties: { x: -50, y: -100, scale: 1.3 }
 		time: 30
 		curve: "linear"
 
@@ -29,13 +29,19 @@ animScaleLogo = new Animation ({
 	time: .4
 })
 
+materialAnimate = (layerName, x, y, width, height) ->
+	initialPosition = x: layerName.x, y: layerName.y
+	print initialPosition
+	layerName.animate
+		properties: { x: x, y: y, width: Screen.width, height: Screen.height }
+	
 bgShow = (bg) ->
-	bg.animate
-		properties: { x: 0, y: 0, scale: 1 }
+	bg.properties = { x: 0, y: 0, scale: 1 }
 		
 bgHide = (bg) ->
 	bg.animate
 		properties: { y: -Screen.height}
+		time: 1.4
 		
 animScaleLogoReverse = animScaleLogo.reverse()
 
@@ -48,22 +54,15 @@ fadeIn = (layerName) ->
 	layerName.animate
 		time: 1.5
 		properties: { opacity: 1 }
-
-
-# HEADER BUTTON
-# ======
-	
-# btn_header = new Layer
-# 	width: Screen.width, height: 500
+		
 			
 # CITIES
 # ======
 
-# Initialise all other cities y position
-sketch.city2.y = 900
+# Initialise city positions
 
 # Start the animation for initial BG
-panZoom(sketch.city1)
+kenBurns(sketch.city1)
 
 # FOOTER
 # ======
@@ -78,39 +77,52 @@ btn_footer = new Layer
 btn_footer.draggable.enabled = true
 btn_footer.draggable.horizontal = false
 
-func = () ->	
-	sketch.search_form.states.switch("hidden")
-	animScaleLogo.start()	
-	fadeOut(sketch.footer1)
-	fadeIn(sketch.footer2)
-	animScaleLogo.on(Events.AnimationEnd, animScaleLogoReverse.start)
+dragStartAnim = (btn) ->	
+	btn.on Events.DragStart, (event, layer)->
+		sketch.search_form.states.switch("hidden")
+		animScaleLogo.start()	
+		fadeOut(sketch.footer1)
+		fadeIn(sketch.footer2)
+		animScaleLogo.on(Events.AnimationEnd, animScaleLogoReverse.start)
 
-funcReverse = () ->
+funcReverse = (btn) ->
 	animScaleLogo.start()
 	fadeOut(sketch.footer2)
 	fadeIn(sketch.footer2)
 	animScaleLogo.on(Events.AnimationEnd, animScaleLogoReverse.start)
-	
-# DragStart listener
-btn_footer.on Events.DragStart, (event, layer)->
-	func()
- 	
-# btn_header.on Events.DragStart, ->
-# 	funcReverse()
 		
+currentCity = sketch.city1
+print currentCity
+
 # DragMove listener
-btn_footer.on Events.DragMove, (event)->
-	sketch.city1.y = -Screen.height/event.y
-
+btn_footer.on Events.DragMove, ()->
+	currentCity.y = -(1606 - btn_footer.y)
+	
 # DragEnd listener	
-btn_footer.on Events.DragEnd, ->
-# 	sketch.city2.states.next()
-	bgShow(sketch.city2)
-# 	sketch.city1.states.next()
-	bgHide(sketch.city1)
+dragEndAnim = (btn, cityCurr, cityNew) ->
+	btn.on Events.DragEnd, ->
+		bgShow(cityNew)
+		bgHide(cityCurr)
+		currentCity = cityNew
+		print currentCity
 
-sketch.city2.on Events.AnimationEnd, ->
-	panZoom(sketch.city2)
+# 	TODO : NEEDS FIXED!!!
+if (currentCity = sketch.city1)
+	dragStartAnim(btn_footer)
+	dragEndAnim(btn_footer, sketch.city1, sketch.city2)
+else if (currentCity = sketch.city2)
+	dragStartAnim(btn_footer)
+	dragEndAnim(btn_footer, sketch.city2, sketch.city3)
+else if (currentCity = sketch.city3)
+	dragStartAnim(btn_footer)
+	dragEndAnim(btn_footer, sketch.city3, sketch.city1)
+
+
+# cities = Utils.cycle([sketch.city1, sketch.city2])
+# city = cities()
+
+sketch.city1.on Events.AnimationEnd, ->
+	kenBurns(sketch.city2)
 
 # Only allow the btn_footer to be swiped on lower half
 btn_footer.draggable.constraints = { x:0, y: 1606, width: Screen.width, height: 1020 }
@@ -131,3 +143,25 @@ sketch.logo.on Events.Click, ->
 
 chevrons = new Layer
 	x:492, y:1668, width:36, height:59, image:"images/arrows.gif"
+	
+	
+# FIELD ANIMATION
+
+# inputDestination = new Layer
+# 	x: 48, y: 687, width: 984, backgroundColor: "white", z: 1
+# 
+# sketch.ic_back.visible = true
+# 
+# sketch.ic_back.superLayer = inputDestination
+# sketch.ic_back.states.add({
+# 	"default": { x: 0, y: 200 } 
+# 	"show": { x: 200, y: 0 } 
+# })
+# 
+# inputDestination.on Events.Click, ->
+# 	materialAnimate(inputDestination, 100, 100)
+# 	sketch.ic_back.states.switch("show")
+# 	
+# sketch.ic_back.on Events.Click, ->
+# 	materialAnimate(inputDestination, 0, 0)
+# 	print "icon tap"

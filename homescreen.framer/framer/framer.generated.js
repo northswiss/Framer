@@ -8,6 +8,355 @@ window.__imported__["homescreen/layers.json.js"] = [
     "children" : [
       {
         "maskFrame" : null,
+        "id" : "664EEDD6-6178-487F-A003-B17E54950AD2",
+        "visible" : false,
+        "children" : [
+
+        ],
+        "image" : {
+          "path" : "images\/Layer-ic_back-664EEDD6-6178-487F-A003-B17E54950AD2.png",
+          "frame" : {
+            "y" : -52,
+            "x" : -52,
+            "width" : 272,
+            "height" : 272
+          }
+        },
+        "imageType" : "png",
+        "layerFrame" : {
+          "y" : -52,
+          "x" : -52,
+          "width" : 272,
+          "height" : 272
+        },
+        "name" : "ic_back"
+      },
+      {
+        "maskFrame" : null,
+        "id" : "9096B4D8-5A16-4C1F-8797-F6A2FEE07C27",
+        "visible" : false,
+        "children" : [
+          {
+            "maskFrame" : {
+              "y" : 1260,
+              "x" : 0,
+              "width" : 1080,
+              "height" : 660
+            },
+            "id" : "E1EDB8E3-840F-4EC5-B7F9-81CC8E9D8292",
+            "visible" : false,
+            "children" : [
+              {
+                "maskFrame" : null,
+                "id" : "FA5C71E9-38C5-435E-8A76-88FEFCC43449",
+                "visible" : true,
+                "children" : [
+                  {
+                    "maskFrame" : null,
+                    "id" : "7A3F62F7-E368-45EF-BB29-0C335F4CCB4F",
+                    "visible" : true,
+                    "children" : [
+
+                    ],
+                    "image" : {
+                      "path" : "images\/Layer-numbers-7A3F62F7-E368-45EF-BB29-0C335F4CCB4F.png",
+                      "frame" : {
+                        "y" : 1220,
+                        "x" : -4,
+                        "width" : 1157,
+                        "height" : 234
+                      }
+                    },
+                    "imageType" : "png",
+                    "layerFrame" : {
+                      "y" : 1220,
+                      "x" : -4,
+                      "width" : 1157,
+                      "height" : 234
+                    },
+                    "name" : "numbers"
+                  },
+                  {
+                    "maskFrame" : null,
+                    "id" : "8C1053AA-F749-4856-AB16-9DAB4149D058",
+                    "visible" : true,
+                    "children" : [
+
+                    ],
+                    "image" : {
+                      "path" : "images\/Layer-letters-8C1053AA-F749-4856-AB16-9DAB4149D058.png",
+                      "frame" : {
+                        "y" : 1241,
+                        "x" : -70,
+                        "width" : 1235,
+                        "height" : 585
+                      }
+                    },
+                    "imageType" : "png",
+                    "layerFrame" : {
+                      "y" : 1241,
+                      "x" : -70,
+                      "width" : 1235,
+                      "height" : 585
+                    },
+                    "name" : "letters"
+                  },
+                  {
+                    "maskFrame" : null,
+                    "id" : "765A5E72-12B1-47F1-8AA8-1EBD99F5BD38",
+                    "visible" : true,
+                    "children" : [
+                      {
+                        "maskFrame" : null,
+                        "id" : "8474BC0E-0D9B-4D28-A8CF-27D019B5878D",
+                        "visible" : true,
+                        "children" : [
+
+                        ],
+                        "image" : {
+                          "path" : "images\/Layer-return_icon-8474BC0E-0D9B-4D28-A8CF-27D019B5878D.png",
+                          "frame" : {
+                            "y" : 1709,
+                            "x" : 860,
+                            "width" : 272,
+                            "height" : 273
+                          }
+                        },
+                        "imageType" : "png",
+                        "layerFrame" : {
+                          "y" : 1709,
+                          "x" : 860,
+                          "width" : 272,
+                          "height" : 273
+                        },
+                        "name" : "return_icon"
+                      }
+                    ],
+                    "image" : {
+                      "path" : "images\/Layer-return-765A5E72-12B1-47F1-8AA8-1EBD99F5BD38.png",
+                      "frame" : {
+                        "y" : 1688,
+                        "x" : 839,
+                        "width" : 308,
+                        "height" : 309
+                      }
+                    },
+                    "imageType" : "png",
+                    "layerFrame" : {
+                      "y" : 1688,
+                      "x" : 839,
+                      "width" : 308,
+                      "height" : 309
+                    },
+                    "name" : "return"
+                  }
+                ],
+                "image" : {
+                  "path" : "images\/Layer-main_keyboard-FA5C71E9-38C5-435E-8A76-88FEFCC43449.png",
+                  "frame" : {
+                    "y" : 1160,
+                    "x" : -100,
+                    "width" : 1280,
+                    "height" : 860
+                  }
+                },
+                "imageType" : "png",
+                "layerFrame" : {
+                  "y" : 1160,
+                  "x" : -100,
+                  "width" : 1280,
+                  "height" : 860
+                },
+                "name" : "main_keyboard"
+              }
+            ],
+            "image" : {
+              "path" : "images\/Layer-ui_keyboard-E1EDB8E3-840F-4EC5-B7F9-81CC8E9D8292.png",
+              "frame" : {
+                "y" : 1160,
+                "x" : -100,
+                "width" : 1280,
+                "height" : 860
+              }
+            },
+            "imageType" : "png",
+            "layerFrame" : {
+              "y" : 1160,
+              "x" : -100,
+              "width" : 1280,
+              "height" : 860
+            },
+            "name" : "ui_keyboard"
+          },
+          {
+            "maskFrame" : null,
+            "id" : "2C4A535B-9567-45A3-BBB5-1B6BCAD20655",
+            "visible" : false,
+            "children" : [
+
+            ],
+            "image" : {
+              "path" : "images\/Layer-square-2C4A535B-9567-45A3-BBB5-1B6BCAD20655.png",
+              "frame" : {
+                "y" : -29,
+                "x" : 71,
+                "width" : 455,
+                "height" : 340
+              }
+            },
+            "imageType" : "png",
+            "layerFrame" : {
+              "y" : -29,
+              "x" : 71,
+              "width" : 455,
+              "height" : 340
+            },
+            "name" : "square"
+          },
+          {
+            "maskFrame" : null,
+            "id" : "033F90FF-E57A-454A-B112-1E81622D0528",
+            "visible" : true,
+            "children" : [
+
+            ],
+            "image" : {
+              "path" : "images\/Layer-home__autosuggest__item-033F90FF-E57A-454A-B112-1E81622D0528.png",
+              "frame" : {
+                "y" : 350,
+                "x" : -100,
+                "width" : 1280,
+                "height" : 434
+              }
+            },
+            "imageType" : "png",
+            "layerFrame" : {
+              "y" : 350,
+              "x" : -100,
+              "width" : 1280,
+              "height" : 434
+            },
+            "name" : "home__autosuggest__item"
+          },
+          {
+            "maskFrame" : null,
+            "id" : "1655AEC1-94E3-424D-A982-2229DC197C6E",
+            "visible" : true,
+            "children" : [
+              {
+                "maskFrame" : null,
+                "id" : "5D0BE296-7D84-411A-87DA-EF1E02938C43",
+                "visible" : true,
+                "children" : [
+                  {
+                    "maskFrame" : null,
+                    "id" : "2EB5137F-D3C5-4FAC-9C18-388880E0AC59",
+                    "visible" : true,
+                    "children" : [
+
+                    ],
+                    "image" : {
+                      "path" : "images\/Layer-Rectangle_147_Copy_3__Rectangle_147_Copy_2-2EB5137F-D3C5-4FAC-9C18-388880E0AC59.png",
+                      "frame" : {
+                        "y" : 158,
+                        "x" : -50,
+                        "width" : 267,
+                        "height" : 206
+                      }
+                    },
+                    "imageType" : "png",
+                    "layerFrame" : {
+                      "y" : 158,
+                      "x" : -50,
+                      "width" : 267,
+                      "height" : 206
+                    },
+                    "name" : "Rectangle_147_Copy_3__Rectangle_147_Copy_2"
+                  }
+                ],
+                "image" : {
+                  "path" : "images\/Layer-icon__dark__current_location-5D0BE296-7D84-411A-87DA-EF1E02938C43.png",
+                  "frame" : {
+                    "y" : 125,
+                    "x" : -53,
+                    "width" : 273,
+                    "height" : 272
+                  }
+                },
+                "imageType" : "png",
+                "layerFrame" : {
+                  "y" : 125,
+                  "x" : -53,
+                  "width" : 273,
+                  "height" : 272
+                },
+                "name" : "icon__dark__current_location"
+              }
+            ],
+            "image" : {
+              "path" : "images\/Layer-nearby_button-1655AEC1-94E3-424D-A982-2229DC197C6E.png",
+              "frame" : {
+                "y" : 125,
+                "x" : -53,
+                "width" : 732,
+                "height" : 272
+              }
+            },
+            "imageType" : "png",
+            "layerFrame" : {
+              "y" : 125,
+              "x" : -53,
+              "width" : 732,
+              "height" : 272
+            },
+            "name" : "nearby_button"
+          },
+          {
+            "maskFrame" : null,
+            "id" : "8219A899-1447-424F-A2F7-98A334A059EB",
+            "visible" : true,
+            "children" : [
+
+            ],
+            "image" : {
+              "path" : "images\/Layer-bg-8219A899-1447-424F-A2F7-98A334A059EB.png",
+              "frame" : {
+                "y" : -100,
+                "x" : -100,
+                "width" : 1280,
+                "height" : 2120
+              }
+            },
+            "imageType" : "png",
+            "layerFrame" : {
+              "y" : -100,
+              "x" : -100,
+              "width" : 1280,
+              "height" : 2120
+            },
+            "name" : "bg"
+          }
+        ],
+        "image" : {
+          "path" : "images\/Layer-view_autosuggest-9096B4D8-5A16-4C1F-8797-F6A2FEE07C27.png",
+          "frame" : {
+            "y" : -100,
+            "x" : -100,
+            "width" : 1280,
+            "height" : 2120
+          }
+        },
+        "imageType" : "png",
+        "layerFrame" : {
+          "y" : -100,
+          "x" : -100,
+          "width" : 1280,
+          "height" : 2120
+        },
+        "name" : "view_autosuggest"
+      },
+      {
+        "maskFrame" : null,
         "id" : "F9651466-5897-4448-9AAC-D4A23ED7E4A5",
         "visible" : true,
         "children" : [
@@ -416,7 +765,7 @@ window.__imported__["homescreen/layers.json.js"] = [
 
             ],
             "image" : {
-              "path" : "images\/Layer-where-676418AC-C4D4-4DA7-8A89-54D99E651BE7.png",
+              "path" : "images\/Layer-field_destination-676418AC-C4D4-4DA7-8A89-54D99E651BE7.png",
               "frame" : {
                 "y" : 663,
                 "x" : 18,
@@ -431,7 +780,7 @@ window.__imported__["homescreen/layers.json.js"] = [
               "width" : 1044,
               "height" : 204
             },
-            "name" : "where"
+            "name" : "field_destination"
           }
         ],
         "id" : "417F10B0-5B2C-4051-B9B5-B86B2C06865D",
@@ -625,18 +974,18 @@ window.__imported__["homescreen/layers.json.js"] = [
             "image" : {
               "path" : "images\/Layer-icon__light__search_copy-0126FD1F-502A-466B-A854-FF49111BB9E5.png",
               "frame" : {
-                "y" : 1652,
-                "x" : 33,
-                "width" : 53,
-                "height" : 53
+                "y" : 1646,
+                "x" : 27,
+                "width" : 18,
+                "height" : 18
               }
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 1652,
-              "x" : 33,
-              "width" : 53,
-              "height" : 53
+              "y" : 1646,
+              "x" : 27,
+              "width" : 18,
+              "height" : 18
             },
             "name" : "icon__light__search_copy"
           }
@@ -699,13 +1048,13 @@ window.__imported__["homescreen/layers.json.js"] = [
             "children" : [
               {
                 "maskFrame" : null,
-                "id" : "96EC2720-5BC0-4983-AA2C-4C3D92A28D13",
+                "id" : "468524D4-5C4D-4363-861B-CCD0398E1252",
                 "visible" : true,
                 "children" : [
 
                 ],
                 "image" : {
-                  "path" : "images\/Layer-expandmore_copy_2-96EC2720-5BC0-4983-AA2C-4C3D92A28D13.png",
+                  "path" : "images\/Layer-expandmore_copy_2-468524D4-5C4D-4363-861B-CCD0398E1252.png",
                   "frame" : {
                     "y" : 1704,
                     "x" : 492,
@@ -724,13 +1073,13 @@ window.__imported__["homescreen/layers.json.js"] = [
               },
               {
                 "maskFrame" : null,
-                "id" : "7C3E34CF-3E93-4F0E-BE0E-C0AE4EEA3B9F",
+                "id" : "6FBA32C9-1C8E-45BC-819A-3B51EBBBE262",
                 "visible" : true,
                 "children" : [
 
                 ],
                 "image" : {
-                  "path" : "images\/Layer-expandmore_copy-7C3E34CF-3E93-4F0E-BE0E-C0AE4EEA3B9F.png",
+                  "path" : "images\/Layer-expandmore_copy-6FBA32C9-1C8E-45BC-819A-3B51EBBBE262.png",
                   "frame" : {
                     "y" : 1686,
                     "x" : 492,
@@ -749,13 +1098,13 @@ window.__imported__["homescreen/layers.json.js"] = [
               },
               {
                 "maskFrame" : null,
-                "id" : "A8A171EE-E2D6-4164-A69F-8E5BDAA13B77",
+                "id" : "5C56E734-1DA4-414A-9ACD-B42FA43CD3CA",
                 "visible" : true,
                 "children" : [
 
                 ],
                 "image" : {
-                  "path" : "images\/Layer-expandmore-A8A171EE-E2D6-4164-A69F-8E5BDAA13B77.png",
+                  "path" : "images\/Layer-expandmore-5C56E734-1DA4-414A-9ACD-B42FA43CD3CA.png",
                   "frame" : {
                     "y" : 1667,
                     "x" : 492,
@@ -773,7 +1122,7 @@ window.__imported__["homescreen/layers.json.js"] = [
                 "name" : "expandmore"
               }
             ],
-            "id" : "7A674547-8EA3-48DE-BE58-50658C26B90D",
+            "id" : "4CF49A4A-AA5E-4592-ABB9-5A84FA106962",
             "visible" : true,
             "imageType" : "png",
             "layerFrame" : {
@@ -786,13 +1135,13 @@ window.__imported__["homescreen/layers.json.js"] = [
           },
           {
             "maskFrame" : null,
-            "id" : "715102F8-A506-43C7-B21A-E5A87DB3C805",
+            "id" : "2D7E4443-305A-4423-9D82-62980AADB224",
             "visible" : true,
             "children" : [
 
             ],
             "image" : {
-              "path" : "images\/Layer-wbsunny-715102F8-A506-43C7-B21A-E5A87DB3C805.png",
+              "path" : "images\/Layer-wbsunny-2D7E4443-305A-4423-9D82-62980AADB224.png",
               "frame" : {
                 "y" : 1647,
                 "x" : 834,
@@ -811,26 +1160,26 @@ window.__imported__["homescreen/layers.json.js"] = [
           },
           {
             "maskFrame" : null,
-            "id" : "FF2610F1-075F-461A-A553-9D3BC154325D",
+            "id" : "F583BCA5-CC65-4DAD-B33F-CB955D121AC4",
             "visible" : true,
             "children" : [
 
             ],
             "image" : {
-              "path" : "images\/Layer-icon__light__search_copy-FF2610F1-075F-461A-A553-9D3BC154325D.png",
+              "path" : "images\/Layer-icon__light__search_copy-F583BCA5-CC65-4DAD-B33F-CB955D121AC4.png",
               "frame" : {
-                "y" : 1652,
-                "x" : 33,
-                "width" : 53,
-                "height" : 53
+                "y" : 1646,
+                "x" : 27,
+                "width" : 18,
+                "height" : 18
               }
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 1652,
-              "x" : 33,
-              "width" : 53,
-              "height" : 53
+              "y" : 1646,
+              "x" : 27,
+              "width" : 18,
+              "height" : 18
             },
             "name" : "icon__light__search_copy"
           }
@@ -896,24 +1245,11 @@ window.__imported__["homescreen/layers.json.js"] = [
     "name" : "home"
   }
 ]
-window.Framer.Defaults.DeviceView = {
-  "deviceScale" : -1,
-  "orientation" : 0,
-  "contentScale" : 1,
-  "deviceType" : "nexus-5-black-hand"
-};
+window.Framer.Defaults.DeviceView = {"deviceScale":-1,"deviceType":"nexus-5-black-hand","contentScale":1,"orientation":""};
 
-window.Framer.Defaults.DeviceComponent = {
-  "deviceScale" : -1,
-  "orientation" : 0,
-  "contentScale" : 1,
-  "deviceType" : "nexus-5-black-hand"
-};
+window.Framer.Defaults.DeviceComponent = {"deviceScale":-1,"deviceType":"nexus-5-black-hand","contentScale":1,"orientation":""};
 
-window.FramerStudioInfo = {
-  "deviceImagesUrl" : "\/_server\/resources\/DeviceImages",
-  "documentTitle" : "homescreen.framer"
-};
+window.FramerStudioInfo = {"deviceImagesUrl":"\/_server\/resources\/DeviceImages","documentTitle":"homescreen.framer"};
 
 Framer.Device = new Framer.DeviceView();
 Framer.Device.setupContext();
@@ -1215,18 +1551,20 @@ traverseUp = function(layer) {
 };
 
 getLayerProperties = function(layer) {
-  var properties;
+  var properties, ref;
   properties = {
     id: layer.id,
-    name: layer.name || layer._variableName || ("Layer " + layer.id),
-    superLayer: null,
-    index: layer.index,
-    visible: layer.visible
+    name: layer.name || ((ref = layer.__framerInstanceInfo) != null ? ref.name : void 0) || ("Layer " + layer.id),
+    superLayer: null
   };
+  _.extend(properties, _.pick(layer, ["x", "y", "z", "index", "width", "height", "scale", "opacity", "rotationX", "rotationY", "rotationZ", "blur"]));
   if (properties.visible === false) {
     properties.visibleResult = false;
   } else {
     properties.visibleResult = indexOf.call(_.pluck(traverseUp(layer), "visible"), false) < 0;
+  }
+  if (layer._states) {
+    properties.states = layer._states._states;
   }
   if (layer.superLayer != null) {
     properties.superLayer = layer.superLayer.id;
@@ -1292,12 +1630,46 @@ exports.ContextListener = ContextListener;
 
 
 },{"./Bridge":2}],4:[function(require,module,exports){
-var ANIMATING_KEYS, highlightColor,
+var ANIMATING_KEYS, highlightColor, scaledFrame, screenScaledFrame,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 highlightColor = "#00A4FF";
 
 ANIMATING_KEYS = ["x", "y", "width", "height", "scaleX", "scaleY", "scaleZ", "scale"];
+
+screenScaledFrame = function(layer) {
+  var context, factorX, factorY, frame, i, layerScaledFrame, layers, len, superLayer;
+  frame = {
+    x: 0,
+    y: 0,
+    width: layer.width * layer.canvasScaleX(),
+    height: layer.height * layer.canvasScaleY()
+  };
+  layers = layer.superLayers(context = true);
+  layers.push(layer);
+  layers.reverse();
+  for (i = 0, len = layers.length; i < len; i++) {
+    superLayer = layers[i];
+    factorX = superLayer._superOrParentLayer() ? superLayer._superOrParentLayer().canvasScaleX() : 1;
+    factorY = superLayer._superOrParentLayer() ? superLayer._superOrParentLayer().canvasScaleY() : 1;
+    layerScaledFrame = scaledFrame(superLayer);
+    frame.x += layerScaledFrame.x * factorX;
+    frame.y += layerScaledFrame.y * factorY;
+  }
+  return frame;
+};
+
+scaledFrame = function(layer) {
+  var frame, scaleX, scaleY;
+  frame = layer.frame;
+  scaleX = layer.scale * layer.scaleX;
+  scaleY = layer.scale * layer.scaleY;
+  frame.width *= scaleX;
+  frame.height *= scaleY;
+  frame.x += (1 - scaleX) * layer.originX * layer.width;
+  frame.y += (1 - scaleY) * layer.originY * layer.height;
+  return frame;
+};
 
 exports.HighlightComponent = (function() {
   function HighlightComponent() {
@@ -1378,15 +1750,16 @@ exports.HighlightComponent = (function() {
     if (!this.current) {
       return;
     }
-    currentFrame = this.current.screenScaledFrame();
+    currentFrame = screenScaledFrame(this.current);
     this.layer.visible = true;
     this.layer.frame = currentFrame;
     this.info.visible = true;
     this.info.frame = currentFrame;
     this.info.width = 500;
+    this.info.height = 50;
     this.info.midX = this.layer.midX;
+    this.info.y = this.layer.maxY + 12;
     this.info.pixelAlign();
-    this.info.y += this.info.height + 12;
     return this.info.textElement.textContent = "x:" + (this.current.x.toFixed(1)) + " y:" + (this.current.y.toFixed(1)) + " width:" + (this.current.width.toFixed(1)) + " height:" + (this.current.height.toFixed(1));
   };
 
@@ -1448,7 +1821,9 @@ Runtime = (function(superClass) {
     this.sourceMap = result.sourceMap;
     this.javascript = result.js;
     this._errorHandlerSetup();
-    return this.javascript;
+    return JSON.stringify({
+      js: this.javascript
+    });
   };
 
   Runtime.prototype.reset = function() {
@@ -1456,9 +1831,14 @@ Runtime = (function(superClass) {
   };
 
   Runtime.prototype.uncoffee = function(code) {
-    var e, error, result;
+    var compile, e, error, result;
+    if (CoffeeScript.cs2js) {
+      compile = CoffeeScript.cs2js;
+    } else {
+      compile = CoffeeScript.compile;
+    }
     try {
-      result = CoffeeScript.compile(code, {
+      result = compile(code, {
         sourceMap: true,
         filename: "app.coffee"
       });
@@ -1487,6 +1867,7 @@ Runtime = (function(superClass) {
       error = new Error("[" + fileName + "] " + runtimeError.message);
       error.lineNumber = -1;
     }
+    console.log("_errorHandler", runtimeError, error);
     return bridge.sendError(error);
   };
 
@@ -1528,7 +1909,7 @@ exports.runtime = new Runtime();
 
 
 },{"./Bridge":2,"eventemitter3":1}],6:[function(require,module,exports){
-var HighlightComponent, setupContext;
+var HighlightComponent, getLayerById, setupContext;
 
 exports.bridge = (require("./Bridge.coffee")).bridge;
 
@@ -1544,8 +1925,19 @@ if (window.require == null) {
   };
 }
 
+getLayerById = function(id) {
+  var i, layer, len, ref;
+  ref = Framer.CurrentContext._layerList;
+  for (i = 0, len = ref.length; i < len; i++) {
+    layer = ref[i];
+    if (layer.id === id) {
+      return layer;
+    }
+  }
+};
+
 setupContext = function() {
-  var context, getLayerById, highlighter;
+  var context, highlighter, savedProperties;
   context = new exports.context.ContextListener(Framer.CurrentContext);
   highlighter = new HighlightComponent();
   exports.bridge.on("ui:highlight", function(info) {
@@ -1554,20 +1946,28 @@ setupContext = function() {
   exports.bridge.on("ui:unhighlight", function() {
     return highlighter.unhighlight();
   });
-  return getLayerById = function(id) {
-    var i, layer, len, ref;
-    ref = Framer.CurrentContext._layerList;
-    for (i = 0, len = ref.length; i < len; i++) {
-      layer = ref[i];
-      if (layer.id === id) {
-        return layer;
-      }
+  savedProperties = null;
+  exports.bridge.on("ui:setstate", function(info) {
+    var layer;
+    layer = getLayerById(info.id);
+    if (info.state === "Current") {
+      return layer.properties = savedProperties;
+    } else {
+      savedProperties = layer.properties;
+      return layer.states.switchInstant(info.state);
     }
-  };
+  });
+  return exports.bridge.on("ui:updateState", function(info) {
+    var layer;
+    layer = getLayerById(info.layerId);
+    layer[info.propertyName] = info.value;
+    return layer.states._states[info.stateName][info.propertyName] = info.value;
+  });
 };
 
 if (typeof window !== "undefined" && window !== null) {
   window.FramerStudio = exports;
+  setupContext();
 }
 
 
