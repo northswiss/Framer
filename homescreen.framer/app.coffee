@@ -35,8 +35,10 @@ materialAnimate = (layerName, x, y, width, height) ->
 	layerName.animate
 		properties: { x: x, y: y, width: Screen.width, height: Screen.height }
 	
+sketch.city2.y = 600
+
 bgShow = (bg) ->
-	bg.properties = { x: 0, y: 0, scale: 1 }
+	bg.properties = { x: 0, y: 600, scale: 1 }
 		
 bgHide = (bg) ->
 	bg.animate
@@ -76,7 +78,14 @@ btn_footer = new Layer
 # Make it draggable
 btn_footer.draggable.enabled = true
 btn_footer.draggable.horizontal = false
+		
+currentCity = sketch.city1
 
+# DragMove listener
+btn_footer.on Events.DragMove, ()->
+	currentCity.y = -(1606 - btn_footer.y)
+	
+# DRAG START LISTENER
 dragStartAnim = (btn) ->	
 	btn.on Events.DragStart, (event, layer)->
 		sketch.search_form.states.switch("hidden")
@@ -90,21 +99,16 @@ funcReverse = (btn) ->
 	fadeOut(sketch.footer2)
 	fadeIn(sketch.footer2)
 	animScaleLogo.on(Events.AnimationEnd, animScaleLogoReverse.start)
-		
-currentCity = sketch.city1
-print currentCity
 
-# DragMove listener
-btn_footer.on Events.DragMove, ()->
-	currentCity.y = -(1606 - btn_footer.y)
-	
 # DragEnd listener	
 dragEndAnim = (btn, cityCurr, cityNew) ->
 	btn.on Events.DragEnd, ->
 		bgShow(cityNew)
 		bgHide(cityCurr)
+		cityNew.animate
+			y: 0
 		currentCity = cityNew
-		print currentCity
+# 		print currentCity
 
 # 	TODO : NEEDS FIXED!!!
 if (currentCity = sketch.city1)
